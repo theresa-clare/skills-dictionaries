@@ -158,7 +158,20 @@ def word_length(words):
 
     """
 
-    return []
+    word_length_list = []
+    len_list = set()
+
+    for word in words:
+        len_list.add(len(word))
+
+    for length in len_list:
+        words_in_length = []
+        for word in words:
+            if len(word) == length:
+                words_in_length.append(word)
+        word_length_list.append((length, words_in_length))
+
+    return word_length_list
 
 
 def pirate_talk(phrase):
