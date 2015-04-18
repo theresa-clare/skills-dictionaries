@@ -142,7 +142,7 @@ def find_duplicates(words):
 
     """
 
-    return []
+    return list(set(words))
 
 
 def word_length(words):
