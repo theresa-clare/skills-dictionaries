@@ -121,8 +121,15 @@ def sum_zero(list1):
         [[-2, 2], [-1, 1], [0, 0]]
 
     """
+    sum_zero_list = []
 
-    return []
+    for num in list1:
+        if -num in list1:
+            sum_zero_list.append([num, -num])
+            list1.remove(num)
+            list1.remove(-num)
+
+    return sum_zero_list
 
 
 def find_duplicates(words):
