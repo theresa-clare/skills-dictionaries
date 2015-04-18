@@ -67,7 +67,12 @@ def common_items(list1, list2):
 
     """
 
-    return []
+    common_list_12 = [item for item in list1 if item in list2]
+    common_list_21 = [item for item in list2 if item in list1]
+
+    if len(common_list_12) > len(common_list_21):
+        return common_list_12
+    return common_list_21
 
 
 def unique_common_items(list1, list2):
