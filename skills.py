@@ -92,7 +92,8 @@ def unique_common_items(list1, list2):
 
     """
 
-    return []
+    
+    return set(list1) & set(list2)
 
 
 def sum_zero(list1):
