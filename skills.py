@@ -66,13 +66,40 @@ def common_items(list1, list2):
         [1, 1, 2, 2]
 
     """
+    common_list = []
 
-    common_list_12 = [item for item in list1 if item in list2]
-    common_list_21 = [item for item in list2 if item in list1]
+    for n in list1:
+        for num in list2:
+            if n == num:
+                common_list.append(num)
 
-    if len(common_list_12) > len(common_list_21):
-        return common_list_12
-    return common_list_21
+
+    # list1_dict = {}
+    # list2_dict = {}
+
+    # # make dictionaries with item and number of time it appears
+    # for n in list1:
+    #     list1_dict[n] = list1_dict.get(n,0) + 1
+    # for num in list2:
+    #     list2_dict[num] = list2_dict.get(num,0) + 1
+
+    # list1_keys = list1_dict.keys()
+    # list2_keys = list2_dict.keys()
+
+    # common_12 = []
+    # common_21 = []
+
+    # # make lists of item if it's in the opposite dictionary
+    # for key1 in list1_keys:
+    #     if list2_dict[key1] >= 1:
+    #         common_12.append(key1)
+    # for key2 in list2_keys:
+    #     if list1_dict[key2] >= 1:
+    #         common_21.append(key2)
+
+    # if len(common_12) > len(common_21):
+    #     return common_12
+    # return common_21
 
 
 def unique_common_items(list1, list2):
@@ -97,7 +124,6 @@ def unique_common_items(list1, list2):
 
     """
 
-    
     return set(list1) & set(list2)
 
 
